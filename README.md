@@ -4,10 +4,12 @@ Javascript core extensions and common utils.
 ## Extensions
 
 ### Core
-##### Date.iso()
-##### String.repl()
-##### Function.defineMethod(name, function)
-##### Function.undefineMethod(name)
+##### Date.iso();
+##### String.repl();
+##### Function.defineMethod(name, function);
+##### Function.undefineMethod(name);
+##### Function.clone(object);
+
 
 ### Mocha
 ##### let(function() { return expresion; });
