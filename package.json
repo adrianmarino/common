@@ -1,0 +1,35 @@
+{
+  "name": "common",
+  "version": "0.0.1",
+  "description": "Core extensions and common utils",
+  "author": {
+      "name": "Adrian Norberto Marino",
+      "email": "adrianmarino@gmail.com"
+  },
+  "maintainers": [
+    "adrianmarino <adrianmarino@gmail.com>"
+  ],
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adrianmarino/commmon.git"
+  },
+  "keywords": [
+    "extensions"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/adrianmarino/commmon/issues"
+  },
+  "homepage": "https://github.com/adrianmarino/commmon#readme",
+  "dependencies": {
+    "mocha": "2.5.3",
+    "chai":"3.5.0"
+  },
+  "scripts": {
+    "tests": "mocha --recursive"
+  }
+}
