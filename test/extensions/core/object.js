@@ -9,31 +9,23 @@ var MethodDefinitionError    = require("../../../lib/extensions/core").MethodDef
 //-----------------------------------------------------------------------------
 // Test
 //-----------------------------------------------------------------------------
-describe("Core", function() {
-  describe("#defineMethod()", function () {
+describe("Core", () => {
+  describe("#defineMethod()", () => {
     function User(name) { this.name = name; };
 
-    before(function() { 
-      User.undefineMethod("getName")
-          .defineMethod("getName", function() { return this.name; }); 
-    });
-    
-    context("when invoked getName method added with defineMethod", function() {
-      var user = let(function() { return new User("Adrian"); });
+    before(() => User.undefineMethod("getName").defineMethod("getName", function() { return this.name; }));
 
-      it("returns Adrian", function () {
-        expect(user().getName()).to.equal("Adrian");
-      });
+    context("when invoked getName method added with defineMethod", () => {
+      var user = let(() => new User("Adrian"));
+      it("returns Adrian", () => expect(user().getName()).to.equal("Adrian"));
     });
 
-    it("throws an MethodDefinitionError when try to define an existent method", function () {        
-      expect(function() { User.defineMethod("getName", function() {}); })
-          .to.throw(MethodDefinitionError.name);
+    it("throws an MethodDefinitionError when try to define an existent method", () => {        
+      expect(() => User.defineMethod("getName", () => {})).to.throw(MethodDefinitionError.name);
     });
 
-    it("delete object method when undefine an existent method", function() {
-      expect(function() { User.defineMethod("getName", function() {}); })
-          .to.throw(MethodDefinitionError.name);
+    it("delete object method when undefine an existent method", () => {
+      expect(() => User.defineMethod("getName", () => {})).to.throw(MethodDefinitionError.name);
     });
   });
 });
