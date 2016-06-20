@@ -2,21 +2,18 @@
 Javascript core extensions and common utils.
 
 ## Extensions
-
 ### Core
-##### Date.iso();
-##### String.repl();
-##### Function.defineMethod(name, function);
-##### Function.undefineMethod(name);
-##### Function.clone(object);
-
+* Date.iso();
+* String.repl();
+* Function.defineMethod(name, function);
+* Function.undefineMethod(name);
+* Function.clone(object);
 
 ### Mocha
-##### let(function() { return expresion; });
-
+* let(() => expresion);
 
 ## Process
-##### exist_message("a message");
+* exist_message("a message");
 
 ## Clases
 #### Map
@@ -24,9 +21,9 @@ Javascript core extensions and common utils.
 * new Map();
 * .keys();
 * .isEmpty();
-* .forEach(function(key, value) { ... });
-* .filter(function(key, value)  { return expression; });
-* .reject(function(key, value)  { return expression; });
+* .forEach((key, value) => ... );
+* .filter((key, value) => expression);
+* .reject((key, value) => expression);
 * .put(key, value);
 * .get(key);
 
