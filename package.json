@@ -3,8 +3,8 @@
   "version": "0.0.2",
   "description": "Core extensions and common utils",
   "author": {
-      "name": "Adrian Norberto Marino",
-      "email": "adrianmarino@gmail.com"
+    "name": "Adrian Norberto Marino",
+    "email": "adrianmarino@gmail.com"
   },
   "maintainers": [
     "adrianmarino <adrianmarino@gmail.com>"
@@ -26,8 +26,9 @@
   },
   "homepage": "https://github.com/adrianmarino/commmon#readme",
   "dependencies": {
+    "chai": "3.5.0",
     "mocha": "2.5.3",
-    "chai":"3.5.0"
+    "sinon": "^1.17.4"
   },
   "scripts": {
     "tests": "mocha --recursive"
